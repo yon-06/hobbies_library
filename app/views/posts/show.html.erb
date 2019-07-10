@@ -1,0 +1,40 @@
+<div Class="main-post-show">
+	<div class="container post-container">
+		<div class="row">
+			<!-- 趣味の名前 -->
+			<h2><%= @post.title %></h2>
+
+			<div class="post-img">
+				<!-- 写真 -->
+				<img src="<%= @post.post_image %>">
+			</div>
+
+			<div class="post-recommend">
+				<!-- おすすめ度　％で表示 -->
+				<p><%= @post.recommend %></p>
+			</div>
+
+			<div class="post-appeal">
+				<!-- 一言PR -->
+				<p><%= @post.appeal %></p>
+			</div>
+
+			<div class="post-cost">
+				<!-- この趣味をはじめるのにかかる初期費用 -->
+				<p><%= @post.cost %></p>
+			</div>
+
+			<div class="post-charm">
+				<!-- この趣味の魅力を表示 -->
+				<p><%= @post.charm %></p>
+			</div>
+
+			<!-- この下コメント欄 -->
+
+
+
+
+			<!-- ここまで -->
+		</div>
+	</div>
+</div>

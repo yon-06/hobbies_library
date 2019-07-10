@@ -26,4 +26,23 @@
     color: white;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
+.main-post{
+	background-image: url(img/library4.jpg);
+	height: 800px;
+}
+
+.post-container{
+	height: 800px;
+	background-color: rgba( 255,255,255,0.5);
+}
+
+.main-post-show{
+	background-image: url(img/library1.jpg);
+	height: 800px;
+}
