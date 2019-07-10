@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+.signup{
+    height: 600px;
+    background-image: url(img/books3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.signup_title{
+    color: white;
+}
+
+
