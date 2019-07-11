@@ -1,24 +1,9 @@
 # README
+アプリ名　「Hobbies Library]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+―アプリ概要
+自分の趣味を探すことができる。
+自分の趣味がない、新しい趣味を探したいけど、探すのがめんどくさい、なにかおすすめの趣味を探しているという方たちをターゲットにしている。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+自分の趣味を投稿、共有し、趣味の図書館みたいなイメージ。
+将来的に自分の趣味を投稿、共有し、趣味仲間を見つけることができる機能を付けたい。
