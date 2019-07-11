@@ -1,0 +1,42 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<div class="show_render">
+				<h2>ユーザー詳細</h2>
+				<%= attachment_image_tag @user, :profile_image, :fill, 70, 70, format: 'jpeg', fallback: "no_image.jpg", size: "70x70" %>
+
+				<table class="table">
+					<tbody>
+						<tr>
+							<th scope="row">Name</th>
+							<th><%= @user.name %></th>
+						</tr>
+					</tbody>
+				</table>
+
+			<% if @user == current_user %>
+				<button type="button" class="btn btn-default btn-block">
+					<span class="" aria-hidden="true"></span><%= link_to "Edit", edit_user_path(@user) %>
+				</button>
+			<% end %>
+			</div>
+		</div>
+
+			<h2>投稿一覧</h2>
+				<table class="col-lg-9">
+					<thead>
+						<th class="col-lg-1">title</th>
+					</thead>
+
+					<% @posts.each do |post| %>
+
+					<tbody>
+						<td><%= link_to post.title, post_path(post.id) %></td>
+					</tbody>
+
+					<% end %>
+
+				</table>
+	</div>
+</div>
