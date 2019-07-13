@@ -11,7 +11,7 @@
                 <div class="anime">
                 <div class="card"  style= "width: 100%;">
 
-                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                   <%= render "devise/shared/error_messages", resource: resource %>
                   <table class="table table-hover table-striped">
                   <!-- <colgroup span="1" width="40%"></colgroup>
@@ -34,13 +34,6 @@
                           <% if @minimum_password_length %>
                           <% end %><br />
                           <td><%= f.password_field :password, autocomplete: "new-password" %></td>
-                        </div>
-                      </tr>
-
-                      <tr align="center">
-                        <div class="field">
-                          <td><%= f.label :パスワード確認 %><br /></td>
-                          <td><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
                         </div>
                       </tr>
 

@@ -4,14 +4,14 @@
 			<div class="new-post">
 				<h2 class="new-post-title">新規投稿</h2>
 
-				<%= form_for @post do |genre| %>
+				<%= form_for @genre do |genre| %>
 				<%= genre.fields_for :posts do |f| %>
 
 				<!-- 趣味の名前 -->
 				<%= f.text_field :title %>
 
 				<!-- イメージ写真 -->
-				<%= f.attachment_field :post_image, autofocus: true, fallback: "no_image.jpg", size: "200x200" %>
+				<%= f.attachment_field :post_image %>
 
 				<!-- この趣味を始めるおすすめ度 -->
 				<%= f.number_field :recommend,  min: 1, max: 100 %>

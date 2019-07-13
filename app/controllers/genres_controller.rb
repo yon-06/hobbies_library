@@ -1,28 +1,20 @@
-class PostsController < ApplicationController
+class GenresController < ApplicationController
 
-    def index
-        @posts = Post.all.order(:created_at)
-    end
+	def index
+	end
 
-    def show
-        @post = Post.find(params[:id])
-    end
-
-    def edit
-
-    end
-
-    def new
-        @post = Genre.new
-        @post.posts.build
+	def new
+        @genre = Genre.new
+        @genre.posts.build
+        binding.pry
 
     end
 
     def create
-        @post = Genre.new(genre_params)
-        @post.user_id = current_user.id
+        @genre = Genre.new(genre_params)
+        @genre.user_id = current_user.id
 
-        if @post.save
+        if @genre.save
             flash[:notice] = "投稿しました"
             redirect_to post_path(@post.id)
         else
@@ -31,15 +23,25 @@ class PostsController < ApplicationController
         end
     end
 
-    def update
+	def art_show
+	end
 
-    end
+	def craft_show
+	end
 
-    def destroy
-        
-    end
+	def life_show
+	end
 
-    private
+	def motion_show
+	end
+
+	def other_show
+	end
+
+	def study_show
+	end
+
+	private
 
     def post_params
         params.require(:genre).permit(:id, :motion, :life, :art, :craft, :study, :other, :post_id, posts_attributes:[:title, :post_image, :user_id, :recommend, :appeal, :cost, :charm] )

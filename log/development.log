@@ -1532,3 +1532,627 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 413ms (Views: 374.5ms | ActiveRecord: 3.2ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-07-13 03:05:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-13 03:05:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (169.5ms)
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-13 03:05:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (92.5ms)
+Started GET "/posts" for 10.0.2.2 at 2019-07-13 03:05:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 16873ms (Views: 16870.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 19792ms (Views: 19745.3ms | ActiveRecord: 17.9ms)
+
+
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-13 03:05:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 989ms (Views: 986.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-07-13 03:06:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7R06P+XdkzKZ+tsl1gSu8he/TCde4ZZkxOXnn042tvBZovzUv+pzC8Db7cr0MIGC2ShAgMWkjWH/UFKEYAwxCQ==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (4.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (3.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (116.5ms)
+Completed 200 OK in 1607ms (Views: 1125.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-07-13 03:06:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 875ms (Views: 872.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-13 03:07:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (111.3ms)
+Completed 200 OK in 1069ms (Views: 1066.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-07-13 03:07:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1tPpAecYgv+P88ofkZyxX4OfPcx+BZlTWuiiV1b03ylibC/qvS9ixtbS/PCzqJ4vTQgxa+VAglZhXRdMeM5Y0A==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@a"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (114.2ms)
+Completed 200 OK in 1572ms (Views: 1091.3ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-07-13 03:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VqrF7cuIWRtvHsLVQOSH2kyBSGOgnnJbrRDLflLGcFPiFQMGkb+5IjY/9Dpi0KiqghZExDvbaV6WpX5lfPz3qg==", "user"=>{"name"=>"テスト１", "email"=>"b@b", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@b"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (63.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "b@b"], ["encrypted_password", "$2a$11$z4x5Q1JYTmcsGQJ6VIszEevWeoG3jHVfUSR05JbFFqmNZ6Njc.Ir2"], ["name", "テスト１"], ["created_at", "2019-07-13 03:08:00.659683"], ["updated_at", "2019-07-13 03:08:00.659683"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 533ms (ActiveRecord: 86.2ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2019-07-13 03:08:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (109.0ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (The asset "no_image.jpg" is not present in the asset pipeline.):
+    4: 			<div class="col-lg-3">
+    5: 				<div class="show_render">
+    6: 					<h2>ユーザー詳細</h2>
+    7: 					<%= attachment_image_tag @user, :profile_image, :fill, 70, 70, format: 'jpeg', fallback: "no_image.jpg", size: "70x70" %>
+    8: 
+    9: 					<table class="table">
+   10: 						<tbody>
+  
+app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb___22519166542355907_69980087179880'
+Started GET "/posts" for 10.0.2.2 at 2019-07-13 03:08:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" ASC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 1032ms (Views: 903.3ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:08:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (74.4ms)
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for(@post) do |f| %>
+    8: 
+    9: 				<!-- 趣味の名前 -->
+   10: 				<%= f.text_field :title %>
+  
+app/views/posts/new.html.erb:7:in `_app_views_posts_new_html_erb___2242704736569806386_69980085510740'
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:42:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 25.7ms)
+
+
+  
+NoMethodError (undefined method `genres' for nil:NilClass):
+  
+app/controllers/posts_controller.rb:17:in `new'
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:48:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 29.7ms)
+
+
+  
+NoMethodError (undefined method `posts' for nil:NilClass):
+  
+app/controllers/posts_controller.rb:17:in `new'
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:49:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 44.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'genre_id' for Post.):
+  
+app/controllers/posts_controller.rb:17:in `new'
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:55:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+better_errors (2.5.1) lib/better_errors/middleware.rb:59:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddGenreIdToPosts (20190713035238)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (63.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "genre_id" integer[0m
+  ↳ db/migrate/20190713035238_add_genre_id_to_posts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713035238"]]
+  ↳ bin/rails:9
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to RemovePostIdFromGenres (20190713035416)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agenres" ("id" integer NOT NULL PRIMARY KEY, "motion" integer DEFAULT NULL, "life" integer DEFAULT NULL, "outdoor" integer DEFAULT NULL, "art" varchar DEFAULT NULL, "craft" integer DEFAULT NULL, "study" integer DEFAULT NULL, "culture" integer DEFAULT NULL, "other" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "post_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "agenres" ("id","motion","life","outdoor","art","craft","study","culture","other","user_id","post_id","created_at","updated_at")
+                     SELECT "id","motion","life","outdoor","art","craft","study","culture","other","user_id","post_id","created_at","updated_at" FROM "genres"[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[35m (11.1ms)[0m  [1m[35mDROP TABLE "genres"[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "genres" ("id" integer NOT NULL PRIMARY KEY, "motion" integer DEFAULT NULL, "life" integer DEFAULT NULL, "outdoor" integer DEFAULT NULL, "art" varchar DEFAULT NULL, "craft" integer DEFAULT NULL, "study" integer DEFAULT NULL, "culture" integer DEFAULT NULL, "other" integer DEFAULT NULL, "user_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("id","motion","life","outdoor","art","craft","study","culture","other","user_id","created_at","updated_at")
+                     SELECT "id","motion","life","outdoor","art","craft","study","culture","other","user_id","created_at","updated_at" FROM "agenres"[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "agenres"[0m
+  ↳ db/migrate/20190713035416_remove_post_id_from_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713035416"]]
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (3.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:56:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (603.7ms)
+Completed 500 Internal Server Error in 1284ms (ActiveRecord: 48.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `genres_path' for #<#<Class:0x000055626ecd5200>:0x000055626eb68c78>):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for(@post) do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/posts/new.html.erb:7:in `_app_views_posts_new_html_erb__1209830346242253362_46940627281000'
+Started GET "/posts/new" for 10.0.2.2 at 2019-07-13 03:58:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (569.4ms)
+Completed 500 Internal Server Error in 925ms (ActiveRecord: 5.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `genres_path' for #<#<Class:0x000055626ecd5200>:0x0000556271b978b8>):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @post do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/posts/new.html.erb:7:in `_app_views_posts_new_html_erb__1209830346242253362_46940651325120'
+Started GET "/posts" for 10.0.2.2 at 2019-07-13 04:10:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" ASC[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (12.7ms)
+Started GET "/genre/new" for 10.0.2.2 at 2019-07-13 04:10:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Completed 200 OK in 5551ms (Views: 5351.4ms | ActiveRecord: 37.8ms)
+
+
+Processing by GenreController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genre/new.html.erb within layouts/application
+  Rendered genre/new.html.erb within layouts/application (488.4ms)
+Completed 500 Internal Server Error in 853ms (ActiveRecord: 20.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `genres_path' for #<#<Class:0x00007f56b834ca68>:0x00007f56b835be78>):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genre/new.html.erb:7:in `_app_views_genre_new_html_erb__4500280816001890179_70005217192240'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:18:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (93.1ms)
+Completed 500 Internal Server Error in 493ms (ActiveRecord: 23.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__1818995568370689388_46931342723720'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:22:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (63.5ms)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__1818995568370689388_46931361920520'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:30:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (90.5ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 24.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___713415337254015956_69966932654780'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:32:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (96.9ms)
+Completed 500 Internal Server Error in 481ms (ActiveRecord: 19.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___1169075720609739706_47155253942480'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:32:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (59.9ms)
+Completed 500 Internal Server Error in 510ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___1169075720609739706_47155270702740'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:41:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (89.0ms)
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 20.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__3178049716264184788_47022737299160'
+  [1m[36mGenre Load (5.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:47:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (80.5ms)
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 17.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<% form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__1260748674079685375_47322569668520'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:52:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:52:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GenresController#new as HTML
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (62.7ms)
+Completed 500 Internal Server Error in 1659ms (ActiveRecord: 24.7ms)
+
+
+  
+  Rendered genres/new.html.erb within layouts/application (31.3ms)
+Completed 500 Internal Server Error in 460ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2241861811017266670_47358540135800'
+    4: 			<div class="new-post">
+    5: 				<h2 class="new-post-title">新規投稿</h2>
+    6: 
+    7: 				<%= form_for @genre do |genre| %>
+    8: 				<%= genre.fields_for :posts do |f| %>
+    9: 
+   10: 				<!-- 趣味の名前 -->
+  
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2241861811017266670_47358540135800'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:56:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 33119ms (ActiveRecord: 54.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image, autofocus: true, fallback: "no_image.jpg", size: "200x200" %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb__2056698186170633028_46920887485180'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__2056698186170633028_46920887485180'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__2056698186170633028_46920887485180'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 04:58:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (101.6ms)
+Completed 500 Internal Server Error in 640ms (ActiveRecord: 51.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb__591962863599445693_47384571788640'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__591962863599445693_47384571788640'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__591962863599445693_47384571788640'

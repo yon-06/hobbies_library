@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
   resources :homes
-  resources :genre
+  resources :genres
   	resource :comments
   	resource :favorites
 
