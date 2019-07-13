@@ -5,8 +5,9 @@ class GenresController < ApplicationController
 
 	def new
         @genre = Genre.new
-        @genre.posts.build
-        binding.pry
+        
+        @genre = @genre.posts.build
+   
 
     end
 

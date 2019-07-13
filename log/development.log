@@ -2156,3 +2156,128 @@ ActionView::Template::Error (undefined method `post_image_attachment_definition'
 app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb__591962863599445693_47384571788640'
 app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__591962863599445693_47384571788640'
 app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__591962863599445693_47384571788640'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 05:18:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (51.5ms)
+Completed 500 Internal Server Error in 418074ms (ActiveRecord: 42.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb___2047008760282519389_46986883559160'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___2047008760282519389_46986883559160'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2047008760282519389_46986883559160'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 05:29:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (205120.0ms)
+Completed 500 Internal Server Error in 660302ms (ActiveRecord: 42.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<% binding.pry %>
+    15: 				<%= f.attachment_field :post_image %>
+    16: 
+    17: 				<!-- この趣味を始めるおすすめ度 -->
+    18: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb___2033489578324789008_47289262282820'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___2033489578324789008_47289262282820'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2033489578324789008_47289262282820'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 05:40:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (13793.9ms)
+Completed 500 Internal Server Error in 45366ms (ActiveRecord: 52.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<% binding.pry %>
+    15: 				<%= f.attachment_field :post_image %>
+    16: 
+    17: 				<!-- この趣味を始めるおすすめ度 -->
+    18: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb__920361977989271053_47119467065660'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__920361977989271053_47119467065660'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__920361977989271053_47119467065660'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 05:42:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (70.3ms)
+Completed 500 Internal Server Error in 558ms (ActiveRecord: 46.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				
+    15: 				<%= f.attachment_field :post_image %>
+    16: 
+    17: 				<!-- この趣味を始めるおすすめ度 -->
+    18: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb___2384705397839266348_47429621249640'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___2384705397839266348_47429621249640'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2384705397839266348_47429621249640'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 05:47:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (102.8ms)
+Completed 500 Internal Server Error in 571ms (ActiveRecord: 43.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				
+    15: 				<%= f.attachment_field :post_image %>
+    16: 
+    17: 				<!-- この趣味を始めるおすすめ度 -->
+    18: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb___2557931624415196443_47375450658580'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___2557931624415196443_47375450658580'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2557931624415196443_47375450658580'
