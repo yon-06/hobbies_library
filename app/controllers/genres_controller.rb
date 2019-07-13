@@ -5,10 +5,7 @@ class GenresController < ApplicationController
 
 	def new
         @genre = Genre.new
-        
-        @genre = @genre.posts.build
-   
-
+        @genre.posts.build
     end
 
     def create
@@ -45,6 +42,6 @@ class GenresController < ApplicationController
 	private
 
     def post_params
-        params.require(:genre).permit(:id, :motion, :life, :art, :craft, :study, :other, :post_id, posts_attributes:[:title, :post_image, :user_id, :recommend, :appeal, :cost, :charm] )
+        params.require(:genre).permit(:id, :motion, :life, :art, :craft, :study, :other, posts_attributes:[:genre_id, :title, :post_image, :user_id, :recommend, :appeal, :cost, :charm] )
     end
 end

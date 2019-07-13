@@ -2281,3 +2281,344 @@ ActionView::Template::Error (undefined method `post_image_attachment_definition'
 app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb___2557931624415196443_47375450658580'
 app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___2557931624415196443_47375450658580'
 app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___2557931624415196443_47375450658580'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 06:16:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (88.1ms)
+Completed 500 Internal Server Error in 585ms (ActiveRecord: 40.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				
+    15: 				<%= f.attachment_field :post_image %>
+    16: 
+    17: 				<!-- この趣味を始めるおすすめ度 -->
+    18: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb__575131002981667796_47107809393240'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__575131002981667796_47107809393240'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__575131002981667796_47107809393240'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 06:19:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (85.6ms)
+Completed 500 Internal Server Error in 571ms (ActiveRecord: 47.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				
+    15: 				<%= f.attachment_field :post_image %>
+    16: 
+    17: 				<!-- この趣味を始めるおすすめ度 -->
+    18: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:15:in `block (2 levels) in _app_views_genres_new_html_erb__1204564610627845461_47374275996040'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__1204564610627845461_47374275996040'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__1204564610627845461_47374275996040'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 06:28:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (84.8ms)
+Completed 500 Internal Server Error in 576ms (ActiveRecord: 48.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb__4254982604471110800_47068305933500'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__4254982604471110800_47068305933500'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__4254982604471110800_47068305933500'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 06:36:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (97.9ms)
+Completed 500 Internal Server Error in 666ms (ActiveRecord: 51.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb__968294702479428573_47445622114620'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__968294702479428573_47445622114620'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__968294702479428573_47445622114620'
+Started GET "/users/2/edit" for 10.0.2.2 at 2019-07-13 06:48:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (91.1ms)
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 27.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:                 <div class="anime">
+    12:                 <div class="card"  style= "width: 100%;">
+    13: 
+    14:                 <%= form_for(@user) do |f| %>
+    15:                   <table class="table table-hover table-striped">
+    16:                   <!-- <colgroup span="1" width="40%"></colgroup>
+    17:                   <colgroup span="1" width="60%"></colgroup> -->
+  
+app/views/users/edit.html.erb:14:in `_app_views_users_edit_html_erb__781950952792649801_47305607540960'
+Started GET "/users/2/edit" for 10.0.2.2 at 2019-07-13 06:49:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (53445.6ms)
+Completed 500 Internal Server Error in 53644ms (ActiveRecord: 7.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:                 <div class="anime">
+    12:                 <div class="card"  style= "width: 100%;">
+    13:                   <% binding.pry %>
+    14:                 <%= form_for(@user) do |f| %>
+    15:                   <table class="table table-hover table-striped">
+    16:                   <!-- <colgroup span="1" width="40%"></colgroup>
+    17:                   <colgroup span="1" width="60%"></colgroup> -->
+  
+app/views/users/edit.html.erb:14:in `_app_views_users_edit_html_erb__781950952792649801_47305624386260'
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-13 06:50:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (37508.9ms)
+Completed 500 Internal Server Error in 37622ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:                 <div class="anime">
+    12:                 <div class="card"  style= "width: 100%;">
+    13:                   <% binding.pry %>
+    14:                 <%= form_for(@user) do |f| %>
+    15:                   <table class="table table-hover table-striped">
+    16:                   <!-- <colgroup span="1" width="40%"></colgroup>
+    17:                   <colgroup span="1" width="60%"></colgroup> -->
+  
+app/views/users/edit.html.erb:14:in `_app_views_users_edit_html_erb__781950952792649801_69828358748100'
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-13 06:51:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-13 06:51:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ (pry):4
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (pry):5
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2835.8ms)
+Completed 500 Internal Server Error in 130357ms (ActiveRecord: 20.9ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:                 <div class="anime">
+    12:                 <div class="card"  style= "width: 100%;">
+    13:                   <% binding.pry %>
+    14:                 <%= form_for(@user) do |f| %>
+    15:                   <table class="table table-hover table-striped">
+    16:                   <!-- <colgroup span="1" width="40%"></colgroup>
+    17:                   <colgroup span="1" width="60%"></colgroup> -->
+  
+app/views/users/edit.html.erb:14:in `_app_views_users_edit_html_erb___3196847044609673936_47437065836880'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2701.3ms)
+Completed 500 Internal Server Error in 138445ms (ActiveRecord: 25.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    11:                 <div class="anime">
+    12:                 <div class="card"  style= "width: 100%;">
+    13:                   <% binding.pry %>
+    14:                 <%= form_for(@user) do |f| %>
+    15:                   <table class="table table-hover table-striped">
+    16:                   <!-- <colgroup span="1" width="40%"></colgroup>
+    17:                   <colgroup span="1" width="60%"></colgroup> -->
+  
+app/views/users/edit.html.erb:14:in `_app_views_users_edit_html_erb___3196847044609673936_47437065836880'
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-13 06:54:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 20860ms (Views: 20679.4ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/users/1/edit" for 10.0.2.2 at 2019-07-13 06:56:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 1318ms (Views: 1151.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 06:56:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (82.7ms)
+Completed 500 Internal Server Error in 538ms (ActiveRecord: 25.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb___3871304151782794689_70169948285200'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___3871304151782794689_70169948285200'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___3871304151782794689_70169948285200'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 07:41:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vender/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vender/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (137.9ms)
+Completed 500 Internal Server Error in 851ms (ActiveRecord: 23.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb__513310481634602746_46992927506500'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb__513310481634602746_46992927506500'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb__513310481634602746_46992927506500'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 07:43:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vender/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vender/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (285580.1ms)
+Completed 500 Internal Server Error in 286033ms (ActiveRecord: 18.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_image_attachment_definition' for nil:NilClass):
+    11: 				<%= f.text_field :title %>
+    12: 
+    13: 				<!-- イメージ写真 -->
+    14: 				<%= f.attachment_field :post_image %>
+    15: 
+    16: 				<!-- この趣味を始めるおすすめ度 -->
+    17: 				<%= f.number_field :recommend,  min: 1, max: 100 %>
+  
+app/views/genres/new.html.erb:14:in `block (2 levels) in _app_views_genres_new_html_erb___963582442662439449_47427501722000'
+app/views/genres/new.html.erb:8:in `block in _app_views_genres_new_html_erb___963582442662439449_47427501722000'
+app/views/genres/new.html.erb:7:in `_app_views_genres_new_html_erb___963582442662439449_47427501722000'
+Started GET "/genres/new" for 10.0.2.2 at 2019-07-13 07:49:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vender/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by GenresController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vender/bundle/ruby/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (23224.0ms)
+Completed 200 OK in 44018ms (Views: 43725.8ms | ActiveRecord: 16.7ms)
+
+

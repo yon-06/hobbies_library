@@ -1,17 +1,10 @@
-<div Class="main-post-new">
-	<div class="container main-container">
-		<div class="row">
-			<div class="new-post">
-				<h2 class="new-post-title">新規投稿</h2>
-
-				<%= form_for @post do |genre| %>
-				<%= genre.fields_for :posts do |f| %>
+<%= form_for(@post) do |f| %>
 
 				<!-- 趣味の名前 -->
 				<%= f.text_field :title %>
 
 				<!-- イメージ写真 -->
-				<%= f.attachment_field :post_image, autofocus: true, fallback: "no_image.jpg", size: "200x200" %>
+				<%= f.attachment_field :post_image %>
 
 				<!-- この趣味を始めるおすすめ度 -->
 				<%= f.number_field :recommend,  min: 1, max: 100 %>
@@ -25,45 +18,5 @@
 				<!-- この趣味の魅力 -->
 				<%= f.text_area :charm %>
 
-				<% end %>
-
-				<div class="radio-box">
-
-					<div class="field">
-						<%= genre.label :アウトドア %>
-						<%= genre.radio_button :motion, 1 %>
-					</div>
-
-					<div class="field">
-						<%= genre.label :日常系 %>
-						<%= genre.radio_button :life, 1 %>
-					</div>
-
-					<div class="field">
-						<%= genre.label :芸術・文化 %>
-						<%= genre.radio_button :art, 1 %>
-					</div>
-
-					<div class="field">
-						<%= genre.label :モノづくり系 %>
-						<%= genre.radio_button :craft, 1 %>
-					</div>
-
-					<div class="field">
-						<%= genre.label :学ぶ系 %>
-						<%= genre.radio_button :study, 1 %>
-					</div>
-
-					<div class="field">
-						<%= genre.label :その他 %>
-						<%= genre.radio_button :other, 1 %>
-					</div>
-
-				</div>
-
 				<%= f.submit "投稿" %>
 				<% end %>
-			</div>
-		</div>
-	</div>
-</div>
