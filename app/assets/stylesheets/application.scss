@@ -37,7 +37,7 @@
 	height: 800px;
 }
 
-.post-container{
+.main-container{
 	height: 800px;
 	background-color: rgba( 255,255,255,0.5);
 }
@@ -54,5 +54,20 @@
 
 .main-post-edit{
 	background-image: url(img/edit.post.jpg);
+	height: 800px;
+}
+
+.main-users{
+	background-image: url(img/user-index.jpg);
+	height: 800px;
+}
+
+.main-users-show{
+	background-image: url(img/user-show.jpg);
+	height: 800px;
+}
+
+.main-users-edit{
+	background-image: url(img/books3.jpg);
 	height: 800px;
 }
