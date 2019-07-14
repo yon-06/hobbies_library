@@ -1,32 +1,39 @@
 <div Class="main-post-show">
 	<div class="container main-container">
-		<div class="row">
+		<!-- <div class="row"> -->
 			<!-- 趣味の名前 -->
 			<h2><%= @post.title %></h2>
 
+
+			<p><small>キーワード（＃タグ）</small></br><%= @post.keyword %></p>
+
 			<div class="post-img">
 				<!-- 写真 -->
-				<img src="<%= @post.post_image %>">
+				<%= attachment_image_tag @post, :post_image, format: "jepeg", fallback: "no_image.jpg", size: "200x200"  %>
 			</div>
 
 			<div class="post-recommend">
 				<!-- おすすめ度　％で表示 -->
-				<p><%= @post.recommend %></p>
+				<p><small>おすすめ度</small></br>
+				 <%= @post.recommend %>%</p>
 			</div>
 
 			<div class="post-appeal">
 				<!-- 一言PR -->
-				<p><%= @post.appeal %></p>
+				<p><small>一言PR</small></br>
+					<%= @post.appeal %></p>
 			</div>
 
 			<div class="post-cost">
 				<!-- この趣味をはじめるのにかかる初期費用 -->
-				<p><%= @post.cost %></p>
+				<p><small>初期費用</small></br>
+					<%= @post.cost %>円</p>
 			</div>
 
 			<div class="post-charm">
 				<!-- この趣味の魅力を表示 -->
-				<p><%= @post.charm %></p>
+				<p><small>魅力</small></br>
+					<%= @post.charm %></p>
 			</div>
 
 			<!-- この下コメント欄 -->
@@ -35,6 +42,6 @@
 
 
 			<!-- ここまで -->
-		</div>
+		<!-- </div> -->
 	</div>
 </div>

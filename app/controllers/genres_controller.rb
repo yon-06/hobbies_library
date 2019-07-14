@@ -41,7 +41,7 @@ class GenresController < ApplicationController
 
 	private
 
-    def post_params
-        params.require(:genre).permit(:id, :motion, :life, :art, :craft, :study, :other, posts_attributes:[:genre_id, :title, :post_image, :user_id, :recommend, :appeal, :cost, :charm] )
+    def genre_params
+        params.require(:genre).permit(:id, :motion, :life, :art, :craft, :study, :other, posts_attributes:[:genre_id, :title, :post_image, :user_id, :recommend, :appeal, :cost, :charm, :keyword] )
     end
 end
