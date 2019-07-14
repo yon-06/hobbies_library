@@ -2,6 +2,14 @@ class PostsController < ApplicationController
 
     def index
         @posts = Post.all
+        @find = Post.new
+    end
+
+    def search
+        @search = Post.new(search_params)
+        @finds = Post.where(keyword: @search.keyword)
+        @find = Post.new
+        render "index"
     end
 
     def show
@@ -49,5 +57,9 @@ class PostsController < ApplicationController
 
     def post_params
         params.require(:post).permit(:title, :post_image, :user_id, :recommend, :appeal, :cost, :charm, :genre, :keyword )
+    end
+
+    def search_params
+        params.require(:post).permit(:keyword)
     end
 end
