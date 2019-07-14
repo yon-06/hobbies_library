@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
     def index
-        @posts = Post.all.order(:created_at)
+        @posts = Post.all
     end
 
     def show
@@ -9,17 +9,16 @@ class PostsController < ApplicationController
     end
 
     def edit
-
+        @post = Post.find(params[:id])
     end
 
     def new
-        @post = Genre.new
-        @post.posts.build
+        @post = Post.new
 
     end
 
     def create
-        @post = Genre.new(genre_params)
+        @post = Post.new(post_params)
         @post.user_id = current_user.id
 
         if @post.save
@@ -32,7 +31,14 @@ class PostsController < ApplicationController
     end
 
     def update
-
+        @post = Post.find(params[:id])
+        if @post.save(post_params)
+            flash[:notice] = "編集しました"
+            redirect_to post_path(@post.id)
+        else
+            flash[:notice] = "編集に失敗しました"
+            render :edit
+        end
     end
 
     def destroy
@@ -42,6 +48,6 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:genre).permit(:id, :motion, :life, :art, :craft, :study, :other, :post_id, posts_attributes:[:title, :post_image, :user_id, :recommend, :appeal, :cost, :charm] )
+        params.require(:post).permit(:title, :post_image, :user_id, :recommend, :appeal, :cost, :charm, :genre, :keyword )
     end
 end

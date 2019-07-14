@@ -1,62 +1,90 @@
 <div Class="main-post-new">
 	<div class="container main-container">
-		<div class="row">
+		<!-- <div class="row"> -->
 			<div class="new-post">
 				<h2 class="new-post-title">新規投稿</h2>
 
-				<%= form_for @genre do |genre| %>
-				<%= genre.fields_for :posts do |f| %>
+				<!-- アルプスレコードのオーダーインデックス -->
 
+				<%= form_for @genre do |genre| %>
 				<!-- 趣味の名前 -->
-				<%= f.text_field :title %>
+				<div class="field">
+					<%= f.label :趣味名 %>
+					<%= f.text_field :title %>
+				</div>
 
 				<!-- イメージ写真 -->
-				<%= f.attachment_field :post_image %>
+				<div class="field">
+					<%= f.label :イメージ写真 %>
+					<%= f.attachment_field :post_image %>
+				</div>
 
 				<!-- この趣味を始めるおすすめ度 -->
-				<%= f.number_field :recommend,  min: 1, max: 100 %>
+				<div class="field">
+					<%= f.label :おすすめ度 %>
+					<%= f.number_field :recommend,  min: 1, max: 100 %>%
+				</div>
 
 				<!-- この趣味の一言PR -->
-				<%= f.text_area :appeal %>
+				<div class="field">
+					<%= f.label :一言PR %>
+					<%= f.text_area :appeal %>
+				</div>
 
 				<!-- この趣味を始めるのにかかる初期費用 -->
-				<%= f.text_field :cost %>円
+				<div class="field">
+					<%= f.label :初期費用 %>
+					<%= f.text_field :cost %>円
+				</div>
 
 				<!-- この趣味の魅力 -->
-				<%= f.text_area :charm %>
+				<div class="field">
+					<%= f.label :魅力 %>
+					<%= f.text_area :charm %>
+				</div>
 
-				
+				<!-- キーワード（ハッシュタグ） -->
+				<div class="field">
+					<%= f.label :キーワード（ハッシュタグ） %>
+					<%= f.text_area :keyword %>
+				</div>
 
 				<div class="radio-box">
 
-					<div class="field">
-						<%= genre.label :アウトドア %>
-						<%= genre.radio_button :motion, 1 %>
+					<div class="form-check">
+						<label>
+							<%= genre.radio_button :motion, 1, class: "form-check-input" %>アウトドア
+						</label>
 					</div>
 
-					<div class="field">
-						<%= genre.label :日常系 %>
-						<%= genre.radio_button :life, 1 %>
+					<div class="form-check">
+						<label>
+							<%= genre.radio_button :life, 1, class: "form-check-input ", :checked => true %>日常系
+						</label>
 					</div>
 
-					<div class="field">
-						<%= genre.label :芸術・文化 %>
-						<%= genre.radio_button :art, 1 %>
+					<div class="form-check">
+						<label>
+							<%= genre.radio_button :art, 1, class: "form-check-input", :checked => true %>芸術・文化
+						</label>
 					</div>
 
-					<div class="field">
-						<%= genre.label :モノづくり系 %>
-						<%= genre.radio_button :craft, 1 %>
+					<div class="form-check">
+						<label>
+							<%= genre.radio_button :craft, 1, class: "form-check-input" %>モノづくり系
+						</label>
 					</div>
 
-					<div class="field">
-						<%= genre.label :学ぶ系 %>
-						<%= genre.radio_button :study, 1 %>
+					<div class="form-check">
+						<label>
+							<%= genre.radio_button :study, 1, class: "form-check-input" %>学ぶ系
+						</label>
 					</div>
 
-					<div class="field">
-						<%= genre.label :その他 %>
-						<%= genre.radio_button :other, 1 %>
+					<div class="form-check">
+						<label>
+							<%= genre.radio_button :other, 1, class: "form-check-input" %>その他
+						</label>
 					</div>
 
 				</div>
@@ -65,6 +93,6 @@
 				<% end %>
 				<% end %>
 			</div>
-		</div>
+		<!-- </div> -->
 	</div>
 </div>

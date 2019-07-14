@@ -4,7 +4,7 @@
 			<div class="row">
 
 				<!-- 投稿一覧回すeach文 -->
-				<%= @posts.each do |post| %>
+				<% @posts.each do |post| %>
 
 				<div class="card" style= "margin: 20px; width: 21%; float: left;">
 					<table class="table table-hover">
@@ -14,7 +14,7 @@
 							<tr align="left">
 								<td>
 									<a href="<%= "/users/#{post.user.id}" %>">
-										<%= attachment_image_tag post, :profile_image, format: "jpeg", fallback: "no_image.jpg", size: "50x50", class: "img-circle" %>
+										<%= attachment_image_tag post.user, :profile_image, format: "jpeg", fallback: "no_image.jpg", size: "50x50", class: "img-circle" %>
 									</a>
 								</td>
 							</tr>
@@ -30,7 +30,7 @@
 
 							<!-- 趣味の名前 -->
 							<tr align="center">
-								<td><%= post.tile %></td>
+								<td><%= post.title %></td>
 							</tr>
 
 							<!-- 一言PR -->

@@ -1,32 +1,54 @@
 <div Class="main-post-edit">
 	<div class="container main-container">
-		<div class="row">
 			<div class="new-post">
 				<h2 class="new-post-title">投稿編集</h2>
 
-				<%= form_for(@post) do |f| %>
+				<%= form_for @post do |f| %>
 
 				<!-- 趣味の名前 -->
-				<%= f.text_field :title %>
+				<div class="field">
+					<%= f.label :趣味名 %>
+					<%= f.text_field :title %>
+				</div>
 
 				<!-- イメージ写真 -->
-				<%= f.attachment_field :post_image, autofocus: true, fallback: "no_image.jpg", size: "200x200" %>
+				<div class="field">
+					<%= f.label :イメージ写真 %>
+					<%= f.attachment_field :post_image %>
+				</div>
 
 				<!-- この趣味を始めるおすすめ度 -->
-				<%= f.number_field :recommend,  min: 1, max: 100 %>
+				<div class="field">
+					<%= f.label :おすすめ度 %>
+					<%= f.number_field :recommend,  min: 1, max: 100 %>%
+				</div>
 
 				<!-- この趣味の一言PR -->
-				<%= f.text_area :appeal %>
+				<div class="field">
+					<%= f.label :一言PR %>
+					<%= f.text_area :appeal %>
+				</div>
 
 				<!-- この趣味を始めるのにかかる初期費用 -->
-				<%= f.text_field :cost %>円
+				<div class="field">
+					<%= f.label :初期費用 %>
+					<%= f.text_field :cost %>円
+				</div>
 
 				<!-- この趣味の魅力 -->
-				<%= f.text_area :charm %>
+				<div class="field">
+					<%= f.label :魅力 %>
+					<%= f.text_area :charm %>
+				</div>
 
+				<!-- キーワード（ハッシュタグ） -->
+				<div class="field">
+					<%= f.label :キーワード（ハッシュタグ） %>
+					<%= f.text_field :keyword %>
+				</div>
+				
 				<%= f.submit "編集" %>
 				<% end %>
-			</div>
 		</div>
 	</div>
 </div>
