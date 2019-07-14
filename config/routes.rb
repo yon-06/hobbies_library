@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   	resource :favorites
 
   	get "/" => "homes#top"
+  	post "search" => "posts#search"
 end
