@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :posts
   resources :homes
   resources :genres
-  	resource :comments
-  	resource :favorites
+  	resource :comments, only: [:create, :destroy]
+  	resource :favorites, only: [:create, :destroy]
 
   	get "/" => "homes#top"
   	post "search" => "posts#search"

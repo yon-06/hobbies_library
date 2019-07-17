@@ -37,7 +37,54 @@
 			</div>
 
 			<!-- この下コメント欄 -->
+			<div class="comment-box">
+				<h2 class="comment-count"><%= @post.comment.count %>件コメント</h2>
+				<ol>
+					<% @post.comment.each do |commnet| %>
+					<li class="comment">
+						<div class="comment-body">
+							<%= attachment_image_tag comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+						</div>
 
+						<div class="">
+							<div class="comment-name"><%= comment.user.name %></div>
+							<div class="comment-date"><%= comment.created_at.strftime('%Y/%m/%d') %></div>
+						</div>
+
+						<% if @post_image.favorited_by?(current_user) %>
+						  <li>
+						    <%= link_to post_image_favorites_path(@post_image), method: :delete do %>
+						      <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+						      <%= @post_image.favorites.count %> いいね
+						    <% end %>
+						  </li>
+						<% else %>
+						  <li>
+						    <%= link_to post_image_favorites_path(@post_image), method: :post do %>
+						      <i class="fa fa-heart-o" aria-hidden="true"></i>
+						      <%= @post_image.favorites.count %> いいね
+						    <% end %>
+						  </li>
+						<% end %>
+
+						<div class="comment-text"><%= comment.comment %></div>
+					</li>
+					<% end %>
+				</ol>
+			</div>
+
+			<div class="comment-title">
+				<h3>コメント</h3>
+			</div>
+
+			<%= form_for [@post, @post_commnet] do |f| %>
+			<div class="row">
+				<div class="col">
+					<%= f.text_area :comment, rows: '5', class: "form-control", placeholder: "質問などをコメントしてみましょう！" %>
+				</div>
+			</div>
+			<%= f.submit "コメントする", class: "btn btn-lg pull-right" %>
+			<% end %>
 
 
 
