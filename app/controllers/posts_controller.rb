@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
     def show
         @post = Post.find(params[:id])
+        @post_comment = Comment.new
     end
 
     def edit
@@ -40,7 +41,7 @@ class PostsController < ApplicationController
 
     def update
         @post = Post.find(params[:id])
-        if @post.save(post_params)
+        if @post.update(post_params)
             flash[:notice] = "編集しました"
             redirect_to post_path(@post.id)
         else
@@ -51,6 +52,33 @@ class PostsController < ApplicationController
 
     def destroy
         
+    end
+
+    def genre_index
+    end
+
+    def art
+        @posts = Post.where(genre: 2)
+    end
+
+    def craft
+        @posts = Post.where(genre: 3)
+    end
+
+    def life
+        @posts = Post.where(genre: 1)
+    end
+
+    def motion
+        @posts = Post.where(genre: 0)
+    end
+
+    def study
+        @posts = Post.where(genre: 4)
+    end
+
+    def other
+        @posts = Post.where(genre: 5)
     end
 
     private
