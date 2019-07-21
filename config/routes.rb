@@ -9,6 +9,14 @@ Rails.application.routes.draw do
   	resource :comments, only: [:create, :destroy]
   	resource :favorites, only: [:create, :destroy]
 
+    get "art" => "posts#art"
+    get "craft" => "posts#craft"
+    get "life" => "posts#life"
+    get "motion" => "posts#motion"
+    get "study" => "posts#study"
+    get "other" => "posts#other"
+    get "genres_index" => "posts#genre_index"
+
   	get "/" => "homes#top"
   	post "search" => "posts#search"
 end

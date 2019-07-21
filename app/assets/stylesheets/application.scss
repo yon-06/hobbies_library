@@ -34,11 +34,10 @@
 
 .main-post{
 	background-image: url(img/library4.jpg);
-	height: 800px;
+	background-size: cover;
 }
 
 .main-container{
-	height: 800px;
 	background-color: rgba( 255,255,255,0.5);
 }
 
@@ -70,4 +69,43 @@
 .main-users-edit{
 	background-image: url(img/books3.jpg);
 	height: 800px;
+}
+
+.main-art{
+	background-image: url(img/art.jpg);
+	height: 800px;
+}
+
+.main-craft{
+	background-image: url(img/craft.jpg);
+	height: 800px;
+}
+
+.main-life{
+	background-image: url(img/life.jpg);
+	height: 800px;
+}
+
+.main-motion{
+	background-image: url(img/motion.jpg);
+	height: 800px;
+}
+
+.main-study{
+	background-image: url(img/study.jpg);
+	height: 800px;
+}
+
+.main-other{
+	background-image: url(img/other.jpg);
+	height: 800px;
+}
+
+.main-genre{
+	background-image: url(img/genre.jpg);
+	height: 800px;
+}
+
+.btn-success {
+	color: white;
 }

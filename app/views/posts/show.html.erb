@@ -38,9 +38,9 @@
 
 			<!-- この下コメント欄 -->
 			<div class="comment-box">
-				<h2 class="comment-count"><%= @post.comment.count %>件コメント</h2>
+				<h2 class="comment-count"><%= @post.comments.count %>件コメント</h2>
 				<ol>
-					<% @post.comment.each do |commnet| %>
+					<% @post.comments.each do |commnet| %>
 					<li class="comment">
 						<div class="comment-body">
 							<%= attachment_image_tag comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
@@ -77,14 +77,14 @@
 				<h3>コメント</h3>
 			</div>
 
-			<%= form_for [@post, @post_commnet] do |f| %>
-			<div class="row">
+			<%#= form_for [@post, @post_commnet] do |f| %>
+			<!-- <div class="row">
 				<div class="col">
-					<%= f.text_area :comment, rows: '5', class: "form-control", placeholder: "質問などをコメントしてみましょう！" %>
+					<%#= f.text_area :comment, rows: '5', class: "form-control", placeholder: "質問などをコメントしてみましょう！" %>
 				</div>
-			</div>
-			<%= f.submit "コメントする", class: "btn btn-lg pull-right" %>
-			<% end %>
+			</div> -->
+			<%#= f.submit "コメントする", class: "btn btn-lg pull-right" %>
+			<%# end %>
 
 
 
