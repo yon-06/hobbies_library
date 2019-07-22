@@ -5,52 +5,65 @@
 				<h2 class="new-post-title">新規投稿</h2>
 
 				<!-- アルプスレコードのオーダーインデックス -->
-
 				<%= form_for @post do |f| %>
 
 				<!-- 趣味の名前 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :趣味名 %>
 					<%= f.text_field :title %>
 				</div>
 
+				</br>
+
 				<!-- イメージ写真 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :イメージ写真 %>
 					<%= f.attachment_field :post_image %>
 				</div>
 
+				</br>
+
 				<!-- この趣味を始めるおすすめ度 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :おすすめ度 %>
 					<%= f.number_field :recommend,  min: 1, max: 100 %>%
 				</div>
 
+				</br>
+
 				<!-- この趣味の一言PR -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :一言PR %>
 					<%= f.text_area :appeal %>
 				</div>
 
+				</br>
+
 				<!-- この趣味を始めるのにかかる初期費用 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :初期費用 %>
 					<%= f.text_field :cost %>円
 				</div>
 
+				</br>
+
 				<!-- この趣味の魅力 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :魅力 %>
-					<%= f.text_area :charm %>
+					<%= f.text_area :charm, rows: '5' %>
 				</div>
 
+				</br>
+
 				<!-- キーワード（ハッシュタグ） -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :キーワード（ハッシュタグ） %>
 					<%= f.text_field :keyword %>
 				</div>
 
-				<div class="radio-box">
+				</br>
+
+				<div class="radio-box d-flex justify-content-center">
 
 					<div class="form-check">
 						<label>
@@ -90,7 +103,12 @@
 
 				</div>
 
-				<%= f.submit "投稿" %>
+				</br>
+
+				<div class="d-flex justify-content-center" style="padding: 10px;">
+					<%= f.submit "投稿", class: "btn btn-warning" %>
+				</div>
+
 				<% end %>
 			</div>
 		<!-- </div> -->

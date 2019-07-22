@@ -3,6 +3,11 @@
 		<div class="container main-container">
 			
 			<div class="row">
+				<% @ranking.each do |ranking| %>
+				<%= ranking.title %>
+				<% end %>
+			</div>
+			<div class="row">
 
 				<!-- 投稿一覧回すeach文 -->
 				<% @posts.each do |post| %>

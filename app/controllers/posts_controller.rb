@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
 
     def index
-        @posts = Post.all
+        @posts = Post.all.order(created_at: :desc)
         @find = Post.new
+    end
+
+    def random
+        @posts = Post.all.order("RANDOM()")
     end
 
     def search
@@ -58,27 +62,29 @@ class PostsController < ApplicationController
     end
 
     def art
-        @posts = Post.where(genre: 2)
+        @posts = Post.where(genre: 2).order(created_at: :desc)
     end
 
     def craft
-        @posts = Post.where(genre: 3)
+        @posts = Post.where(genre: 3).order(created_at: :desc)
     end
 
     def life
-        @posts = Post.where(genre: 1)
+        @posts = Post.where(genre: 1).order(created_at: :desc)
     end
 
     def motion
-        @posts = Post.where(genre: 0)
+        @posts = Post.where(genre: 0).order(created_at: :desc)
+        @ranking = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+        binding.pry
     end
 
     def study
-        @posts = Post.where(genre: 4)
+        @posts = Post.where(genre: 4).order(created_at: :desc)
     end
 
     def other
-        @posts = Post.where(genre: 5)
+        @posts = Post.where(genre: 5).order(created_at: :desc)
     end
 
     private

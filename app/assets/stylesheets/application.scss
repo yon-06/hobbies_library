@@ -15,8 +15,14 @@
  */
 @import "bootstrap";
 
+body{
+	font-family: 'Yu Mincho';
+}
+
+
+
 .signup{
-    height: 600px;
+    height: 500px;
     background-image: url(img/books3.jpg);
     background-size: cover;
     background-position: center;
@@ -35,6 +41,7 @@
 .main-post{
 	background-image: url(img/library4.jpg);
 	background-size: cover;
+	background-position: bottom;
 }
 
 .main-container{
@@ -43,69 +50,112 @@
 
 .main-post-show{
 	background-image: url(img/library1.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-post-new{
 	background-image: url(img/new-post.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-post-edit{
 	background-image: url(img/edit-post.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-users{
 	background-image: url(img/user-index.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-users-show{
 	background-image: url(img/user-show.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-users-edit{
 	background-image: url(img/books3.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-art{
 	background-image: url(img/art.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-craft{
 	background-image: url(img/craft.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-life{
 	background-image: url(img/life.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-motion{
 	background-image: url(img/motion.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-study{
 	background-image: url(img/study.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-other{
 	background-image: url(img/other.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-genre{
 	background-image: url(img/genre.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .btn-success {
 	color: white;
+}
+
+.user-posts{
+	color: black;
+	font-size: 20px;
+}
+
+.genre-index{
+	color: black;
+	margin: 15px;
+}
+
+.post-recommend{
+	margin: 15px;
+}
+
+.post-appeal{
+	margin: 15px;
+}
+
+.post-charm{
+	padding: 30px;
+}
+
+.bookmark-list{
+	padding: 30px;
+}
+
+.bookmark-item{
+	color: black;
 }

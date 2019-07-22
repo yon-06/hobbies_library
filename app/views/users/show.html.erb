@@ -2,43 +2,52 @@
 	<div class="container main-container">
 		<h2>ユーザー詳細</h2>
 		<div class="row">
-			<div class="col-lg-3">
-				<div class="show_render">
-					
-					<%= attachment_image_tag @user, :profile_image, :fill, 70, 70, format: 'jpeg', fallback: "no_image.jpg", size: "70x70" %>
-
-					<table class="table">
-						<tbody>
-							<tr>
-								<th scope="row">Name</th>
-								<th><%= @user.name %></th>
-							</tr>
-						</tbody>
-					</table>
-
-				<% if @user == current_user %>
-					<button type="button" class="btn btn-default btn-block">
-						<span class="" aria-hidden="true"></span><%= link_to "Edit", edit_user_path(@user) %>
-					</button>
-				<% end %>
+		<!-- ジェケット画像表示させる所 -->
+		<div class="col-md-4" style="margin-bottom: 20px;">
+			<div class="card">
+				<div class="card-body text-center">
+					<%= attachment_image_tag @user, :profile_image, format: "jpeg", fallback: "no_image.jpg", size: "300x300" %>
 				</div>
+				<ul class="list-group list-group-flash">
+					<li class="list-group-item", align="center"><%= @user.name %></li>
+					<% if @user == current_user %>
+					<li class="list-group-item", align="center">
+					<div class="btn btn-light">
+						<%= link_to "編集", edit_user_path(@user) %>
+					</div></li>
+				<% end %>
+				</ul>
 			</div>
+		</div>
+				<div class="show_render">
 
-				<h2>投稿一覧</h2>
-					<table class="col-lg-9">
-						<thead>
-							<th class="col-lg-1">title</th>
-						</thead>
+			</div>
+					<div class="col-md-8">
 
+
+					<table>
+						<thead><h2>投稿一覧</h2></thead>
 						<% @posts.each do |post| %>
 
 						<tbody>
-							<td><%= link_to post.title, post_path(post.id) %></td>
+							<td><%= link_to post.title, post_path(post.id), class: "user-posts" %></td>
 						</tbody>
 
 						<% end %>
-
 					</table>
-		</div>
-	</div>
+				</div>
+				</div>
+				<div class="row">
+					<div class="bookmark col d-flex justify-content-center">
+						<h2>ブックマーク一覧</h2>
+					</div>
+				</div>
+					<div class="bookmark-list">
+						<table align="center">
+						<% @bookmark.each do |bookmark| %>
+						<tr>
+						<td><%= link_to bookmark.post.title, posts_path(bookmark.id), class: "bookmark-item" %></td>
+						<tr>
+						<% end %>
+					</div>
 </div>
