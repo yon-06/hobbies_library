@@ -1,10 +1,11 @@
 class FavoritesController < ApplicationController
 
 	def create
+        user_id = current_user.id
         post = Post.find(params[:post_id])
-        favorite = current_user.favorite.new(post_id: post.id)
+        favorite = Favorite.new(post_id: post.id, user_id: user_id)
         favorite.save
-        redirect_to posts_path(post)
+        redirect_to posts_path(post.id)
     end
     
     def destroy

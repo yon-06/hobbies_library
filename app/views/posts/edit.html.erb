@@ -1,54 +1,116 @@
 <div Class="main-post-edit">
 	<div class="container main-container">
-			<div class="new-post">
+		<!-- <div class="row"> -->
+			<div class="edit-post">
 				<h2 class="new-post-title">投稿編集</h2>
 
+				<!-- アルプスレコードのオーダーインデックス -->
 				<%= form_for @post do |f| %>
 
 				<!-- 趣味の名前 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :趣味名 %>
 					<%= f.text_field :title %>
 				</div>
 
+				</br>
+
 				<!-- イメージ写真 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :イメージ写真 %>
 					<%= f.attachment_field :post_image %>
 				</div>
 
+				</br>
+
 				<!-- この趣味を始めるおすすめ度 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :おすすめ度 %>
 					<%= f.number_field :recommend,  min: 1, max: 100 %>%
 				</div>
 
+				</br>
+
 				<!-- この趣味の一言PR -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :一言PR %>
 					<%= f.text_area :appeal %>
 				</div>
 
+				</br>
+
 				<!-- この趣味を始めるのにかかる初期費用 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :初期費用 %>
 					<%= f.text_field :cost %>円
 				</div>
 
+				</br>
+
 				<!-- この趣味の魅力 -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :魅力 %>
-					<%= f.text_area :charm %>
+					<%= f.text_area :charm, rows: '5' %>
 				</div>
 
+				</br>
+
 				<!-- キーワード（ハッシュタグ） -->
-				<div class="field">
+				<div class="field d-flex justify-content-center">
 					<%= f.label :キーワード（ハッシュタグ） %>
 					<%= f.text_field :keyword %>
 				</div>
-				
-				<%= f.submit "編集" %>
+
+				</br>
+
+				<div class="radio-box d-flex justify-content-center">
+
+					<div class="form-check" style="margin: 10px;">
+						<label>
+							<%= f.radio_button :genre, 0, class: "form-check-input" %>アウトドア
+						</label>
+					</div>
+
+					<div class="form-check" style="margin: 10px;">
+						<label>
+							<%= f.radio_button :genre, 1, class: "form-check-input " %>日常系
+						</label>
+					</div>
+
+					<div class="form-check" style="margin: 10px;">
+						<label>
+							<%= f.radio_button :genre, 2, class: "form-check-input" %>芸術・文化
+						</label>
+					</div>
+
+					<div class="form-check" style="margin: 10px;">
+						<label>
+							<%= f.radio_button :genre, 3, class: "form-check-input" %>モノづくり系
+						</label>
+					</div>
+
+					<div class="form-check" style="margin: 10px;">
+						<label>
+							<%= f.radio_button :genre, 4, class: "form-check-input" %>学ぶ系
+						</label>
+					</div>
+
+					<div class="form-check" style="margin: 10px;">
+						<label>
+							<%= f.radio_button :genre, 5, class: "form-check-input" %>その他
+						</label>
+					</div>
+
+				</div>
+
+				</br>
+
+				<div class="d-flex justify-content-center" style="padding: 10px;">
+					<%= f.submit "編集", class: "btn btn-warning" %>
+				</div>
+
 				<% end %>
-		</div>
+			</div>
+		<!-- </div> -->
 	</div>
 </div>
