@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     get "other" => "posts#other"
     get "genres_index" => "posts#genre_index"
     get "random" => "posts#random"
-
+    get "about" => "homes#about"
   	get "/" => "homes#top"
   	post "search" => "posts#search"
 
