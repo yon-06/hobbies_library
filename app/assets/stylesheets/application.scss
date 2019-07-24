@@ -15,8 +15,14 @@
  */
 @import "bootstrap";
 
+body{
+	font-family: 'Yu Mincho';
+}
+
+
+
 .signup{
-    height: 600px;
+    height: 500px;
     background-image: url(img/books3.jpg);
     background-size: cover;
     background-position: center;
@@ -34,40 +40,142 @@
 
 .main-post{
 	background-image: url(img/library4.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-container{
-	height: 800px;
-	background-color: rgba( 255,255,255,0.5);
+	background-color: rgba( 255,255,255,0.8);
 }
 
 .main-post-show{
 	background-image: url(img/library1.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-post-new{
 	background-image: url(img/new-post.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-post-edit{
-	background-image: url(img/edit.post.jpg);
-	height: 800px;
+	background-image: url(img/edit-post.jpg);
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-users{
 	background-image: url(img/user-index.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-users-show{
 	background-image: url(img/user-show.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .main-users-edit{
 	background-image: url(img/books3.jpg);
-	height: 800px;
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-art{
+	background-image: url(img/art.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-craft{
+	background-image: url(img/craft.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-life{
+	background-image: url(img/life.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-motion{
+	background-image: url(img/motion.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-study{
+	background-image: url(img/study.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-other{
+	background-image: url(img/other.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.main-genre{
+	background-image: url(img/genre.jpg);
+	height: 520px;
+	background-size: cover;
+	background-position: bottom;
+}
+.main-container-genre{
+	background-color: rgba( 255,255,255,0.5);
+	height: 520px;
+}
+
+.btn-success {
+	color: white;
+}
+
+.user-posts{
+	color: black;
+	font-size: 20px;
+}
+
+.genre-index{
+	color: black;
+	margin: 30px;
+}
+
+.post-recommend{
+	margin: 15px;
+}
+
+.post-appeal{
+	margin: 15px;
+}
+
+.post-charm{
+	padding: 30px;
+}
+
+.bookmark-list{
+	padding: 30px;
+}
+
+.bookmark-item{
+	color: black;
+	font-size: 20px;
+}
+
+.carousel-item{
+	transition: transform .9s ease; /*遷移スピードを変更*/
+}
+
+.main-about{
+	background-image: url(img/top7.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.about-main{
+	color: white;
 }

@@ -1,40 +1,93 @@
 <div Class="main-post-show">
 	<div class="container main-container">
-		<div class="row">
+		<!-- <div class="row"> -->
 			<!-- 趣味の名前 -->
-			<h2><%= @post.title %></h2>
+			<h2 class="d-flex justify-content-center"><%= @post.title %></h2>
 
-			<div class="post-img">
+			<div class="post-img d-flex justify-content-center">
 				<!-- 写真 -->
-				<img src="<%= @post.post_image %>">
+				<%= attachment_image_tag @post, :post_image, format: "jepeg", fallback: "no_image.jpg", size: "800x500"  %>
 			</div>
+
+			<h5 class="col-10 d-flex justify-content-end"><small>キーワード（＃タグ）</small></br><%= @post.keyword %></h5>
 
 			<div class="post-recommend">
 				<!-- おすすめ度　％で表示 -->
-				<p><%= @post.recommend %></p>
-			</div>
+				<h3 class="d-flex justify-content-center"><small>おすすめ度:  </small></br>
+				 <%= @post.recommend %>%</h3>
+			</div></br>
 
 			<div class="post-appeal">
 				<!-- 一言PR -->
-				<p><%= @post.appeal %></p>
-			</div>
-
-			<div class="post-cost">
-				<!-- この趣味をはじめるのにかかる初期費用 -->
-				<p><%= @post.cost %></p>
+					<h3 class="d-flex justify-content-center" style="margin: 15px;"><%= @post.appeal %></h3>
 			</div>
 
 			<div class="post-charm">
 				<!-- この趣味の魅力を表示 -->
-				<p><%= @post.charm %></p>
+				<h4 class="d-flex justify-content-center">魅力</h4>
+					<p class="card" align="center"><%= @post.charm %></p>
 			</div>
 
-			<!-- この下コメント欄 -->
+			<div class="post-cost">
+				<!-- この趣味をはじめるのにかかる初期費用 -->
+				<p class="d-flex justify-content-center"><small>初期費用</small></br>
+					約<%= @post.cost %>円</p>
+			</div>
+			<div>
+      			<%= link_to "この趣味をブックマーク！", post_favorites_path(@post.id), method: :post %>
+      		</div>
 
+			<!-- この下コメント欄 -->
+			<div class="comment-box">
+				<h2 class="comment-count"><%= @post.comments.count %>件コメント</h2>
+				<ol>
+					<% @post.comments.each do |commnet| %>
+					<li class="comment">
+						<div class="comment-body">
+							<%= attachment_image_tag comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+						</div>
+
+						<div class="">
+							<div class="comment-name"><%= comment.user.name %></div>
+							<div class="comment-date"><%= comment.created_at.strftime('%Y/%m/%d') %></div>
+						</div>
+
+						<% if @post_image.favorited_by?(current_user) %>
+						  <li>
+						    <%= link_to "ブックマーク", favorites_path(@post), method: :delete do %>
+						      <%= @post_image.favorites.count %> いいね
+						    <% end %>
+						  </li>
+						<% else %>
+						  <li>
+						    <%= link_to "ブックマーク", favorites_path(@post), method: :post do %>
+						      <%= @post_image.favorites.count %> いいね
+						    <% end %>
+						  </li>
+						<% end %>
+
+						<div class="comment-text"><%= comment.comment %></div>
+					</li>
+					<% end %>
+				</ol>
+			</div>
+
+			<div class="comment-title">
+				<h3>コメント</h3>
+			</div>
+
+			<%#= form_for [@post, @post_commnet] do |f| %>
+			<!-- <div class="row">
+				<div class="col">
+					<%#= f.text_area :comment, rows: '5', class: "form-control", placeholder: "質問などをコメントしてみましょう！" %>
+				</div>
+			</div> -->
+			<%#= f.submit "コメントする", class: "btn btn-lg pull-right" %>
+			<%# end %>
 
 
 
 			<!-- ここまで -->
-		</div>
+		<!-- </div> -->
 	</div>
 </div>
