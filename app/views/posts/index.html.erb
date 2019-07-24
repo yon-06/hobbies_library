@@ -25,8 +25,8 @@
 
 				<!-- 投稿一覧回すeach文 -->
 				<% @posts.each do |post| %>
-
-				<div class="card" style= "width: 21%; margin: 20px;">
+				<div class="col-12 col-sm-3">
+				<div class="card mb-4">
 					<div class="card-title text-center">
 						<strong><%= post.title %></strong>
 					</div>
@@ -62,6 +62,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
 				
 
