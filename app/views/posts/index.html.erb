@@ -1,18 +1,22 @@
 <div class="clearfix">
 	<div class="main-post">
 		<div class="container main-container">
-			<!-- <span class="navbar-text">
-	          <div class="collapse navbar-collapse" id="navbarForm">
-	            <form class="form-inline my-2 my-lg-0 ml-auto">
-	              <%#= form_for @find, url: search_path do |search| %>
-	                <%#= search.text_field :keyword, placeholder="キーワード（＃タグ）", class: "form-control mr-sm-2" %>
-	                <%#= search.submit "検索", class: "btn btn-outline-success my-2 my-sm-0" %>
-	              <%# end %>
-	              <input class="form-control mr-sm-2" type="text" placeholder="キーワード（＃タグ）" aria-label="キーワード（＃タグ）">
-	              <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button> -->
-	            <!--</form>
-	          </div>
-        	</span> -->
+
+			<!-- ブックマークされたランキング -->
+			<h3>～人気の趣味・上位３位～</h3>
+        	<div class="row">
+        		<table class="table col-sm-3">
+        			<tr>
+						<% @ranking.each do |ranking| %>
+						<td><h5><%=link_to ranking.title, post_path(ranking.id), class: "badge badge-primary"%></h5></td>
+						<% end %>
+					</tr>
+				</table>
+			</div>
+			<!-- /ブックマークされたランキング -->
+
+
+			<!-- 投稿順ボタン -->
         	<div class="row">
         		<div class="new-index">
         			<%= link_to "新着投稿順", posts_path, class: "btn btn-warning" %>
@@ -21,54 +25,62 @@
         			<%= link_to "ランダム表示", random_path, class: "btn btn-danger" %>
         		</div>
         	</div>
+        	<!-- /投稿順ボタン -->
+
+        	<!-- 投稿一覧カード -->
 			<div class="row">
 
 				<!-- 投稿一覧回すeach文 -->
 				<% @posts.each do |post| %>
-				<div class="col-12 col-sm-3">
-				<div class="card mb-4">
-					<div class="card-title text-center">
-						<strong><%= post.title %></strong>
-					</div>
-					<%= attachment_image_tag post, :post_image, class: "card-img-top", format: "jpeg", fallback: "no_image.jpg", size: "200x200" %>
-					<div class="card-body">
-						
-						<p class="card-subtitle">
-							ジャンル：
-							<% if post.genre == 0 %>
-								アウトドア
-							<% elsif post.genre == 1 %>
-								日常系
-							<% elsif post.genre == 2 %>
-								芸術・文化
-							<% elsif post.genre == 3 %>
-								モノづくり系
-							<% elsif post.genre == 4 %>
-								学ぶ系
-							<% elsif post.genre == 5 %>
-								その他
-							<% else %>
 
-							<% end %>
-						</p></br>
-							<p class="card-text"><%= post.appeal %></p>
-					</div>
-					<ul class="list-group list-group-flash">
-						<li class="list-group-item">おすすめ度：<%= post.recommend %>% !</li>
-					</ul>
-					<div class="card-body">
-						<div class="btn btn-success post-btn">
-							<a href="<%= "/posts/#{post.id}" %>" target="_blank" style="color: white;">詳細へ</a>
+				<div class="col-12 col-sm-3">
+					<div class="card mb-4">
+
+						<div class="card-title text-center">
+							<strong><%= post.title %></strong>
 						</div>
+
+						<%= attachment_image_tag post, :post_image, class: "card-img-top", format: "jpeg", fallback: "no_image.jpg", size: "200x200" %>
+
+						<div class="card-body">
+							<p class="card-subtitle">
+								ジャンル：
+								<!-- カラムの中身の分岐処理 -->
+								<% if post.genre == 0 %>
+									アウトドア
+								<% elsif post.genre == 1 %>
+									日常系
+								<% elsif post.genre == 2 %>
+									芸術・文化
+								<% elsif post.genre == 3 %>
+									モノづくり系
+								<% elsif post.genre == 4 %>
+									学ぶ系
+								<% elsif post.genre == 5 %>
+									その他
+								<% else %>
+
+								<% end %>
+							</p></br>
+								<p class="card-text"><%= post.appeal %></p>
+						</div>
+
+						<ul class="list-group list-group-flash">
+							<li class="list-group-item">おすすめ度：<%= post.recommend %>% !</li>
+						</ul>
+
+						<div class="card-body">
+							<div class="btn btn-success post-btn">
+								<a href="<%= "/posts/#{post.id}" %>" target="_blank" style="color: white;">詳細へ</a>
+							</div>
+						</div>
+
 					</div>
 				</div>
-			</div>
-
-				
-
 				<% end %>
 			</div>
-			
+			<!-- /投稿一覧カード -->
+
 		</div>
 	</div>
 </div>

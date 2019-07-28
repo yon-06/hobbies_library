@@ -1,40 +1,33 @@
 <div class="clearfix">
 	<div class="main-other">
 		<div class="container main-container">
-			
+
 			<div class="row">
 
 				<!-- 投稿一覧回すeach文 -->
 				<% @posts.each do |post| %>
-
-				<div class="card" style= "margin: 20px; width: 21%; float: left;">
-					<table class="table table-hover">
-						<tbody>
-
-
-							<!-- 投稿画像 -->
-							<tr align="center">
-								<td>
-									<a href="<%= "/posts/#{post.id}" %>">
-										<%= attachment_image_tag post, :post_image, format: "jpeg", fallback: "no_image.jpg", size: "200x200" %>
-									</a>
-								</td>
-							</tr>
-
-							<!-- 趣味の名前 -->
-							<tr align="center">
-								<td><%= post.title %></td>
-							</tr>
-
-							<!-- 一言PR -->
-							<tr align="center">
-								<td><%= post.appeal %></td>
-							</tr>
-
-							<!-- できればジャンルを表示させたい　if文で分岐？ -->
-						</tbody>
-					</table>
+				<div class="col-12 col-sm-3">
+				<div class="card mb-4">
+					<div class="card-title text-center">
+						<strong><%= post.title %></strong>
+					</div>
+					<%= attachment_image_tag post, :post_image, class: "card-img-top", format: "jpeg", fallback: "no_image.jpg", size: "200x200" %>
+					<div class="card-body">
+						</br>
+							<p class="card-text"><%= post.appeal %></p>
+					</div>
+					<ul class="list-group list-group-flash">
+						<li class="list-group-item">おすすめ度：<%= post.recommend %>% !</li>
+					</ul>
+					<div class="card-body">
+						<div class="btn btn-success post-btn">
+							<a href="<%= "/posts/#{post.id}" %>" target="_blank" style="color: white;">詳細へ</a>
+						</div>
+					</div>
 				</div>
+			</div>
+
+				
 
 				<% end %>
 			</div>

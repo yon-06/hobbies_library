@@ -1,93 +1,58 @@
-<div Class="main-post-show">
-	<div class="container main-container">
-		<!-- <div class="row"> -->
-			<!-- 趣味の名前 -->
-			<h2 class="d-flex justify-content-center"><%= @post.title %></h2>
+<div Class="py-4 main-post-show">
+	<section id="show">
+		<div class="container main-container">
+			<h3 class="mb-3">～詳細～</h3>
+			<p><%= @post.appeal %></p>
 
-			<div class="post-img d-flex justify-content-center">
-				<!-- 写真 -->
-				<%= attachment_image_tag @post, :post_image, format: "jepeg", fallback: "no_image.jpg", size: "800x500"  %>
-			</div>
+			<div class="row">
 
-			<h5 class="col-10 d-flex justify-content-end"><small>キーワード（＃タグ）</small></br><%= @post.keyword %></h5>
-
-			<div class="post-recommend">
-				<!-- おすすめ度　％で表示 -->
-				<h3 class="d-flex justify-content-center"><small>おすすめ度:  </small></br>
-				 <%= @post.recommend %>%</h3>
-			</div></br>
-
-			<div class="post-appeal">
-				<!-- 一言PR -->
-					<h3 class="d-flex justify-content-center" style="margin: 15px;"><%= @post.appeal %></h3>
-			</div>
-
-			<div class="post-charm">
-				<!-- この趣味の魅力を表示 -->
-				<h4 class="d-flex justify-content-center">魅力</h4>
-					<p class="card" align="center"><%= @post.charm %></p>
-			</div>
-
-			<div class="post-cost">
-				<!-- この趣味をはじめるのにかかる初期費用 -->
-				<p class="d-flex justify-content-center"><small>初期費用</small></br>
-					約<%= @post.cost %>円</p>
-			</div>
-			<div>
-      			<%= link_to "この趣味をブックマーク！", post_favorites_path(@post.id), method: :post %>
-      		</div>
-
-			<!-- この下コメント欄 -->
-			<div class="comment-box">
-				<h2 class="comment-count"><%= @post.comments.count %>件コメント</h2>
-				<ol>
-					<% @post.comments.each do |commnet| %>
-					<li class="comment">
-						<div class="comment-body">
-							<%= attachment_image_tag comment.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-						</div>
-
-						<div class="">
-							<div class="comment-name"><%= comment.user.name %></div>
-							<div class="comment-date"><%= comment.created_at.strftime('%Y/%m/%d') %></div>
-						</div>
-
-						<% if @post_image.favorited_by?(current_user) %>
-						  <li>
-						    <%= link_to "ブックマーク", favorites_path(@post), method: :delete do %>
-						      <%= @post_image.favorites.count %> いいね
-						    <% end %>
-						  </li>
-						<% else %>
-						  <li>
-						    <%= link_to "ブックマーク", favorites_path(@post), method: :post do %>
-						      <%= @post_image.favorites.count %> いいね
-						    <% end %>
-						  </li>
-						<% end %>
-
-						<div class="comment-text"><%= comment.comment %></div>
-					</li>
-					<% end %>
-				</ol>
-			</div>
-
-			<div class="comment-title">
-				<h3>コメント</h3>
-			</div>
-
-			<%#= form_for [@post, @post_commnet] do |f| %>
-			<!-- <div class="row">
-				<div class="col">
-					<%#= f.text_area :comment, rows: '5', class: "form-control", placeholder: "質問などをコメントしてみましょう！" %>
+				<!-- 左 -->
+				<div class="col-md-6">
+					<section id="image">
+						<h4 class="mb-6"></h4>
+						<!-- イメージ写真 -->
+						<%= attachment_image_tag @post, :post_image, format: "jepeg", fallback: "no_image.jpg", class: "img-fluid" %>
+						<!-- /イメージ写真 -->
+						<p><span class="rounded"><%= link_to "ブックマーク！", post_favorites_path(@post.id), method: :post, class: "btn btn-success" %></span></p>
+					</section>
 				</div>
-			</div> -->
-			<%#= f.submit "コメントする", class: "btn btn-lg pull-right" %>
-			<%# end %>
+				<!-- /左 -->
 
+				<!-- 右 -->
+				<div class="col-md-6">
+					<section id="info">
+						<h4 class="mb-3"></h4>
+						<!-- 趣味の詳細 -->
+						<table class="table table-hover table-striped">
+							<tbody>
+								<tr>
+									<th style="width: 40%;">趣味名</th>
+									<td style="width: 60%;"><%= @post.title %></td>
+								</tr>
+								<tr>
+									<th style="width: 40%;">おすすめ度</th>
+									<td style="width: 60%;"><%= @post.recommend %>%</td>
+								</tr>
+								<tr>
+									<th style="width: 40%;">初期費用</th>
+									<td style="width: 60%;">約<%= @post.cost %>円</td>
+								</tr>
+								<tr>
+									<th style="width: 40%;">キーワード</br>（ハッシュタグ）</th>
+									<td style="width: 60%;"><%= @post.keyword %></td>
+								</tr>
+								<tr>
+									<th style="width: 40%;">魅力</th>
+									<td style="width: 60%;"><%= @post.charm %></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- /趣味の詳細 -->
+					</section>
+				</div>
+				<!-- /右 -->
 
-
-			<!-- ここまで -->
-		<!-- </div> -->
-	</div>
+			</div>
+		</div>
+	</section>
 </div>

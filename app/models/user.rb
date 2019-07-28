@@ -9,4 +9,6 @@ class User < ApplicationRecord
          has_many :genres
 
          attachment :profile_image
+
+         validates :name, presence: true
 end
