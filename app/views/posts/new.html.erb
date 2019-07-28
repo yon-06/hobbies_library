@@ -8,7 +8,7 @@
 				<%= form_for @post do |f| %>
 
 				<!-- 趣味の名前 -->
-				<div class="field d-flex justify-content-center">
+				<div class="py-3 field d-flex justify-content-center">
 					<%= f.label :趣味名 %>
 					<%= f.text_field :title %>
 				</div>
@@ -16,7 +16,7 @@
 				</br>
 
 				<!-- イメージ写真 -->
-				<div class="field d-flex justify-content-center">
+				<div class="py-3 field d-flex justify-content-center">
 					<%= f.label :イメージ写真 %>
 					<%= f.attachment_field :post_image %>
 				</div>
@@ -24,23 +24,25 @@
 				</br>
 
 				<!-- この趣味を始めるおすすめ度 -->
-				<div class="field d-flex justify-content-center">
+				<div class=" py-3 field d-flex justify-content-center">
 					<%= f.label :おすすめ度 %>
 					<%= f.number_field :recommend,  min: 1, max: 100 %>%
 				</div>
+				<p align="center">｛初めての方へのおすすめ度！｝</p>
 
 				</br>
 
 				<!-- この趣味の一言PR -->
-				<div class="field d-flex justify-content-center">
-					<%= f.label :一言PR %>
+				<div class="py-3 field d-flex justify-content-center">
+					<%= f.label :一言アピール %>
 					<%= f.text_area :appeal %>
 				</div>
+				<p align="center">｛この趣味を一言でアピール！（３０文字以内)｝</p>
 
 				</br>
 
 				<!-- この趣味を始めるのにかかる初期費用 -->
-				<div class="field d-flex justify-content-center">
+				<div class="py-3 field d-flex justify-content-center">
 					<%= f.label :初期費用 %>
 					<%= f.text_field :cost %>円
 				</div>
@@ -48,22 +50,23 @@
 				</br>
 
 				<!-- この趣味の魅力 -->
-				<div class="field d-flex justify-content-center">
+				<div class="py-3 field d-flex justify-content-center">
 					<%= f.label :魅力 %>
-					<%= f.text_area :charm, rows: '5' %>
+					<%= f.text_area :charm, rows: '7' %>
 				</div>
+				<p align="center">｛この趣味の魅力や伝えたいこと（200文字以内)｝</p>
 
 				</br>
 
 				<!-- キーワード（ハッシュタグ） -->
-				<div class="field d-flex justify-content-center">
+				<div class="py-3 field d-flex justify-content-center">
 					<%= f.label :キーワード（ハッシュタグ） %>
 					<%= f.text_field :keyword %>
 				</div>
 
 				</br>
 
-				<div class="radio-box d-flex justify-content-center">
+				<div class="py-3 radio-box d-flex justify-content-center">
 
 					<div class="form-check">
 						<label>

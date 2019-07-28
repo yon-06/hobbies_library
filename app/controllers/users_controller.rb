@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    before_action :authenticate_user!
+    before_action :correct_user
     def index
         @users = User.all
     end
@@ -36,6 +38,14 @@ class UsersController < ApplicationController
     def destroy
         
     end
+
+    def correct_user
+    user = User.find(params[:id])
+    if current_user != user
+      flash[:notice] = "You cannot acceess this page :("
+      redirect_to user_path(current_user)
+    end
+  end
 
     private
 
