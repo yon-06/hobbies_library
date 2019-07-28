@@ -1,56 +1,98 @@
-<div class="main-users-show">
-	<div class="container main-container">
-		<h2>ユーザー詳細</h2>
-		<div class="row">
-		<!-- ジェケット画像表示させる所 -->
-		<div class="col-md-4" style="margin-bottom: 20px;">
-			<div class="card">
-				<div class="card-body text-center">
-					<%= attachment_image_tag @user, :profile_image, format: "jpeg", fallback: "no_image.jpg", size: "300x300" %>
-				</div>
-				<ul class="list-group list-group-flash">
-					<li class="list-group-item", align="center"><%= @user.name %></li>
-					<% if @user == current_user %>
-					<li class="list-group-item", align="center">
-					<div class="btn btn-light">
-						<%= link_to "編集", edit_user_path(@user) %>
-					</div></li>
-				<% end %>
-				</ul>
+<div class=" py-4 main-users-show">
+	<section id="user">
+		<div class="container main-container">
+			<h3 class=" mb-3">ユーザー詳細</h3>
+			<p>ここでは、ユーザー情報や、投稿一覧、ブックマークしたものを見れます。</p>
+
+			<!-- タブ -->
+			<div class="nav nav-tabs" id="tab-menus" role="tablist">
+				<!-- タブ１ -->
+				<a class="nav-item nav-link active" id="tab-menu01" data-toggle="tab" href="#panel-menu01" role="tab" aria-controls="panel-menu01" aria-selected="true" style="color: black;">ユーザー</a>
+
+				<!-- タブ２ -->
+				<a class="nav-item nav-link" id="tab-menu02" data-toggle="tab" href="#panel-menu02" role="tab" aria-controls="panel-menu02" aria-selected="false" style="color: black;">投稿一覧</a>
+
+				<!-- タブ３ -->
+				<a class="nav-item nav-link" id="tab-menu03" data-toggle="tab" href="#panel-menu03" role="tab" aria-controls="panel-menu03" aria-selected="false" style="color: black;">ブックマーク</a>
 			</div>
-		</div>
-				<div class="show_render">
+			<!-- /タブ -->
 
-			</div>	
-			<div class="col-md-2"></div>
-					<div class="col-md-4 d-flex justify-content-end">
-
-
-					<table>
-						<thead><h2 class="w-100">投稿一覧</h2></thead>
-						<% @posts.each do |post| %>
-
-						<tbody>
-							<tr>
-								<td><%= link_to post.title, post_path(post.id), class: "user-posts" %></td>
-							</tr>
-						</tbody>
-
-						<% end %>
-					</table>
-				</div>
-				</div>
-
-				<div class="row">
-					<div class="col-4"></div>
-					<div class="bookmark-list col-6 d-flex justify-content-end">
-						<table>
-						<thead><h2 class="w-100">ブックマーク一覧</h2></thead>
-						<% @bookmark.each do |bookmark| %>
-						<tr>
-							<td><%= link_to bookmark.post.title, posts_path(bookmark.id), class: "bookmark-item" %></td>
-						</tr>
-						<% end %>
+			<!-- タブのパネル -->
+			<div class="tab-content" id="panel-menus">
+				<!-- パネル１ -->
+				<div class="tab-pane fade show active border border-top-0" id="panel-menu01" role="tabpanel" aria-labelledy="tab-menu01">
+					<div class="row p-3">
+						<div class="col-md-7 order-md-2">
+							<h4>ユーザー情報</h4>
+							<table class="table table-striped">
+								<tbody>
+									<tr>
+										<th>ペンネーム</th>
+										<td><%= @user.name %></td>
+									</tr>
+									<tr>
+										<th>アドレス</th>
+										<td><%= @user.email %></td>
+									</tr>
+									<tr>
+										<th>ユーザー情報</th>
+										<td><%= link_to "編集", edit_user_path(@user), class: "btn btn-success user-show" %></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-5">
+							<%= attachment_image_tag @user, :profile_image, format: "jpeg", fallback: "no_image.jpg", class: "img-fluid" %>
+						</div>
 					</div>
-					</div
+				</div>
+
+				<!-- パネル２ -->
+				<div class="tab-pane fade border border-top-0" id="panel-menu02" role="tabpanel" aria-labelledy="tab-menu02">
+					<div class="row p-3">
+						<div class="col-md-7 order-md-2">
+							<h4>投稿一覧</h4>
+							<table class="table table-striped">
+								<tbody>
+									<tr>
+										<% @posts.each do |post| %>
+										<th>　　　　</th>
+										<td><%= link_to post.title, post_path(post.id), class: "user-posts" %></td>
+										<td><%= link_to "編集", edit_post_path(post.id), class: "btn btn-warning user-posts" %></td>
+									</tr>
+									<% end %>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-5">
+							<%= attachment_image_tag @user, :profile_image, format: "jpeg", fallback: "no_image.jpg", class: "img-fluid" %>
+						</div>
+					</div>
+				</div>
+
+				<!-- パネル３ -->
+				<div class="tab-pane fade border border-top-0" id="panel-menu03" role="tabpanel" aria-labelledy="tab-menu03">
+					<div class="row p-3">
+						<div class="col-md-7 order-md-2">
+							<h4>ブックマーク</h4>
+							<table class="table table-striped">
+								<tbody>
+									<% @bookmark.each do |bookmark| %>
+									<tr>
+										<th>　　　　</th>
+										<td><%= link_to bookmark.post.title, posts_path(bookmark.id), class: "bookmark-item" %></td>
+									</tr>
+									<% end %>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-5">
+							<%= attachment_image_tag @user, :profile_image, format: "jpeg", fallback: "no_image.jpg", class: "img-fluid" %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /タブのパネル -->
+		</div>
+	</section>
 </div>

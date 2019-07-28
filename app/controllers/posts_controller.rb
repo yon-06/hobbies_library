@@ -1,20 +1,17 @@
 class PostsController < ApplicationController
 
+    before_action :authenticate_user!, only: [:edit, :update, :new, :create]
+    before_action :correct_user
     def index
         @posts = Post.all.order(created_at: :desc)
-        @find = Post.new
+        @ranking = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
     end
 
     def random
         @posts = Post.all.order("RANDOM()")
+        @ranking = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
     end
 
-    def search
-        @search = Post.new(search_params)
-        @finds = Post.where(keyword: @search.keyword)
-        @find = Post.new
-        render "index"
-    end
 
     def show
         @post = Post.find(params[:id])
@@ -75,7 +72,7 @@ class PostsController < ApplicationController
 
     def motion
         @posts = Post.where(genre: 0).order(created_at: :desc)
-        @ranking = Post.find(Favorite.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+        
     end
 
     def study
@@ -85,6 +82,14 @@ class PostsController < ApplicationController
     def other
         @posts = Post.where(genre: 5).order(created_at: :desc)
     end
+
+    def correct_user
+    user = current_user
+    if current_user != user
+      flash[:notice] = "You cannot acceess this page :("
+      redirect_to posts_path
+    end
+  end
 
     private
 
