@@ -22,8 +22,8 @@ body{
 
 
 .signup{
-    height: 500px;
-    background-image: url(/images/books3.jpg);
+    
+    background-image: url(/images/img/books3.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -39,7 +39,7 @@ body{
 }
 
 .main-post{
-	background-image: url(/images/library4.jpg);
+	background-image: url(/images/img/library4.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
@@ -49,79 +49,79 @@ body{
 }
 
 .main-post-show{
-	background-image: url(/images/library1.jpg);
+	background-image: url(/images/img/library1.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-post-new{
-	background-image: url(/images/new-post.jpg);
+	background-image: url(/images/img/new-post.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-post-edit{
-	background-image: url(/images/edit-post.jpg);
+	background-image: url(/images/img/edit-post.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-users{
-	background-image: url(/images/user-index.jpg);
+	background-image: url(/images/img/user-index.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-users-show{
-	background-image: url(/images/user-show.jpg);
+	background-image: url(/images/img/user-show.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-users-edit{
-	background-image: url(/images/books3.jpg);
+	background-image: url(/images/img/books3.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-art{
-	background-image: url(/images/art.jpg);
+	background-image: url(/images/img/art.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-craft{
-	background-image: url(/images/craft.jpg);
+	background-image: url(/images/img/craft.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-life{
-	background-image: url(/images/life.jpg);
+	background-image: url(/images/img/life.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-motion{
-	background-image: url(/images/motion.jpg);
+	background-image: url(/images/img/motion.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-study{
-	background-image: url(/images/study.jpg);
+	background-image: url(/images/img/study.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-other{
-	background-image: url(/images/other.jpg);
+	background-image: url(/images/img/other.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
 
 .main-genre{
-	background-image: url(/images/genre.jpg);
+	background-image: url(/images/img/genre.jpg);
 	height: 520px;
 	background-size: cover;
 	background-position: bottom;
@@ -137,6 +137,11 @@ body{
 
 .user-posts{
 	color: black;
+	font-size: 20px;
+}
+
+.users-show{
+	color: white;
 	font-size: 20px;
 }
 
@@ -171,7 +176,7 @@ body{
 }
 
 .main-about{
-	background-image: url(/images/top7.jpg);
+	background-image: url(/images/img/top7.jpg);
 	background-size: cover;
 	background-position: bottom;
 }
