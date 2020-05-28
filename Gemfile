@@ -77,7 +77,7 @@ gem 'view_source_map'
 
 gem 'annotate_models'
 
-gem 'kaminari','~> 1.1.1'
+gem 'kaminari','~> 1.2.1'
 
 gem 'ransack'
 
